@@ -2,7 +2,7 @@ import { UNDO, REDO, RECORD } from './actions';
 
 export const initialState = {
   before: [],
-  current: '#ffccff',
+  current: '#870887',
   after: [],
 };
 
