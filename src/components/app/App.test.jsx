@@ -17,5 +17,10 @@ describe('App component', () => {
     const undoButton = screen.getByTestId('undoButton');
     userEvent.click(undoButton);
     expect(display).toHaveStyle({ backgroundColor: '#086A87' });
+ 
+    //test redo button
+    const redoButton = screen.getByTestId('redoButton');
+    userEvent.click(redoButton);
+    expect(display).toHaveStyle({ backgroundColor: '#ffccff' });
   });
 });
