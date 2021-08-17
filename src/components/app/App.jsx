@@ -1,4 +1,4 @@
-import React { useState } from 'react';
+import React, { useState } from 'react';
 
 
 const useRecord = (init) => {
@@ -32,18 +32,18 @@ const useRecord = (init) => {
 };
 
 function App() {
-  const { current, undo, redo, record } = useRecord('#FF0000');
+  const { current, undo, redo, record } = useRecord('#086A87');
 
   return (
     <>
       <button onClick={undo}>undo</button>
       <button onClick={redo}>redo</button>
-      <input
+      <input data-testid="colorInput"
         type="color"
         value={current}
         onChange={({ target }) => record(target.value)}
       />
-      <div
+      <div data-testid="display"
         style={{ backgroundColor: current, width: '10rem', height: '10rem' }}
       ></div>
     </>
