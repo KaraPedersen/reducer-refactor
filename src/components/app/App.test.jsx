@@ -13,5 +13,9 @@ describe('App component', () => {
     const colorInput = screen.getByTestId('colorInput');
     fireEvent.change(colorInput, { target: { value: '#ffccff' } });
     expect(display).toHaveStyle({ backgroundColor: '#ffccff' });
+    //test undo button
+    const undoButton = screen.getByTestId('undoButton');
+    userEvent.click(undoButton);
+    expect(display).toHaveStyle({ backgroundColor: '#086A87' });
   });
 });
